@@ -15,6 +15,7 @@ router.post('/transactions', async (req, res) => {
 
 // Route to get all transactions
 router.get('/transactions', async (req, res) => {
+  console.log('Received a GET request to /transactions');
   try {
     const transactions = await Transaction.find();
     res.status(200).json(transactions);
